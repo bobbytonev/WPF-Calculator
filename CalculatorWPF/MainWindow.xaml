@@ -1,0 +1,59 @@
+﻿<Window x:Class="CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="457" Width="287" Background="Black">
+    <StackPanel Margin="0,0,0,0" Background="Black" VerticalAlignment="Top"  Height="420"
+ >
+        <TextBox x:Name="hystory" IsReadOnly = "True" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" Height="122" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" TextAlignment="Right" TextChanged="TextBox_TextChanged_1" Foreground="White" SelectionBrush="#FF0080FF" Background="Black" BorderThickness="0,1,0,0" BorderBrush="White" />
+        <TextBox  x:Name="equals" IsReadOnly = "False" Height="29"  VerticalContentAlignment="Bottom"  TextWrapping="NoWrap" Text="0" TextAlignment="Right" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="White" BorderThickness="0,0,0,1" FontSize="22" />
+        <Grid Height="267
+"  Margin="0,0,0,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button Foreground="White" BorderBrush="#7F0080C0" Content="C" FontSize="16" Background="Black" Click="Button_Click_3"/>
+            <Button  Grid.Column="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="(" FontSize="16" Click="command"></Button>
+            <Button  Click="command" Grid.Column="2" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content=")" FontSize="16"></Button>
+            <Button  Click="command" Grid.Column="3" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="*" FontSize="16"></Button>
+
+            <Button Grid.Row="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="7" FontSize="16" Click="command"></Button>
+            <Button Click="command" Grid.Row="1" Grid.Column="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="8" FontSize="16"></Button>
+            <Button Click="command" Grid.Row="1" Grid.Column="2" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="9" FontSize="16"></Button>
+            <Button Click="command" Grid.Row="1" Grid.Column="3" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="/" FontSize="16"></Button>
+
+            <Button Click="command" Grid.Row="2" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="4" FontSize="16"></Button>
+            <Button Click="command" Grid.Row="2" Grid.Column="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="5" FontSize="16"/>
+            <Button Click="command"  Grid.Row="2" Grid.Column="2" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="6" FontSize="16"></Button>
+            <Button Click="command" Grid.Row="2" Grid.Column="3" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="+" FontSize="16"></Button>
+
+            <Button Click="command" Grid.Row="3" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="1" FontSize="16"></Button>
+            <Button Click="command"  Grid.Row="3" Grid.Column="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="2" FontSize="16"></Button>
+            <Button  Click="command" Grid.Row="3" Grid.Column="2" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="3" FontSize="16"></Button>
+            <Button Click="command" Grid.Row="3" Grid.Column="3" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="-" FontSize="16"></Button>
+
+            <Button Click="command" Grid.Row="4" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="0" FontSize="16"/>
+            <Button Click="command" Grid.Row="4" Grid.Column="1" Background="Black" Foreground="White" BorderBrush="#7F0080C0" Content="." FontSize="16"></Button>
+            <Button Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="2" Background="Black" Foreground="White" BorderBrush="#CCFFFFFF" Content="=" FontSize="16" FontWeight="Bold" Click="Button_Click_2"></Button>
+
+
+
+
+        </Grid>
+
+    </StackPanel>
+</Window>
